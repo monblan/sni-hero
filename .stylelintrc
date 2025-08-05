@@ -1,0 +1,7 @@
+{
+  "rules": {
+    "selector-no-qualifying-type": null,
+    "selector-class-pattern": null
+  },
+  "ignoreFiles": ["**/node_modules/**"]
+} 
