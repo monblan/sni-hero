@@ -35,6 +35,7 @@ jQuery(document).ready(function($){
     function checkSlidersInitialized() {
         if (sliderLeft.hasClass('slick-initialized') && sliderRight.hasClass('slick-initialized')) {
             heroSection.css('visibility', 'visible');
+            AOS.init();
         }
     }
 });
