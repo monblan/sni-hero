@@ -1,0 +1,33 @@
+# Logs
+*.log
+log.txt
+discussion_log.txt
+
+# IDE files
+.vscode/
+*.code-workspace
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+
+# Build directories
+dist/
+build/
+
+# Node modules (if using npm)
+node_modules/
+
+# Environment files
+.env
+.env.local
+.env.production 
