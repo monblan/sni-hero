@@ -1,116 +1,125 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>SH | PROJECT</title>
-        <!-- Добавлен комментарий для демонстрации Git -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-        <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SH | PROJECT</title>
+    <!-- Добавлен комментарий для демонстрации Git -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    <body>
+<body>
 
-        <header class="header">
-            <div class="container">
-                <div class="header-content">
-                    <div class="logo">SH | PROJECT</div>
-                    <nav class="menu">
-                        <ul>
-                            <li><a href="#">О НАС</a></li>
-                            <li><a href="#">УСЛУГИ</a></li>
-                            <li><a href="#">ЦЕНЫ</a></li>
-                            <li><a href="#">ПРОЕКТЫ ДОМОВ</a></li>
-                            <li><a href="#">АКЦИИ</a></li>
-                            <li><a href="#">КОНТАКТЫ</a></li>
-                        </ul>
-                    </nav>
-                    <div class="header-contacts">
-                        <a href="tel:+79137025553">+7 (913) 702-55-53</a>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">SH | PROJECT</div>
+                <nav class="menu main-menu">
+                    <ul>
+                        <li><a href="#">О НАС</a></li>
+                        <li><a href="#">УСЛУГИ</a></li>
+                        <li><a href="#">ЦЕНЫ</a></li>
+                        <li><a href="#">ПРОЕКТЫ ДОМОВ</a></li>
+                        <li><a href="#">АКЦИИ</a></li>
+                        <li><a href="#">КОНТАКТЫ</a></li>
+                    </ul>
+                </nav>
+                <div class="header-contacts">
+                    <a href="tel:+79137025553">+7 (913) 702-55-53</a>
+                </div>
+                <div class="burger" id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="side-menu" id="sideMenu">
+      <ul>
+        <li><a href="#">О НАС</a></li>
+        <li><a href="#">УСЛУГИ</a></li>
+        <li><a href="#">ЦЕНЫ</a></li>
+        <li><a href="#">ПРОЕКТЫ ДОМОВ</a></li>
+        <li><a href="#">АКЦИИ</a></li>
+        <li><a href="#">КОНТАКТЫ</a></li>
+      </ul>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <main>
+        <section class="hero">
+            <div class="hero-background-img">
+                <img src="https://images.placeholders.dev/?width=200&height=200&text=Logo" alt="BG element">
+            </div>
+            <div class="hero-sliders">
+                <div class="container">
+                    <div class="hero-sliders-wrapper">
+                        <div class="slider-content">
+                            <div class="slider-left">
+                                <div>
+                                    <h1>ПРОЕКТИРОВАНИЕ ДОМОВ И КОТТЕДЖЕЙ</h1>
+                                    <p>Отражение Вашей индивидуальности в каждом квадратном метре</p>
+                                    <button class="btn">Подробнее</button>
+                                </div>
+                                <div>
+                                    <h1>ИНДИВИДУАЛЬНЫЕ ПРОЕКТЫ</h1>
+                                    <p>Воплотим любую вашу мечту в реальность с нашими архитекторами</p>
+                                    <button class="btn">Подробнее</button>
+                                </div>
+                                <div>
+                                    <h1>ГОТОВЫЕ РЕШЕНИЯ</h1>
+                                    <p>Выберите из сотен готовых проектов, проверенных временем</p>
+                                    <button class="btn">Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-images-wrapper">
+                            <div class="slider-right">
+                                <div><img src="https://images.placeholders.dev/?width=1200&height=800&text=House+1" alt="House 1"></div>
+                                <div><img src="https://images.placeholders.dev/?width=1200&height=800&text=House+2" alt="House 2"></div>
+                                <div><img src="https://images.placeholders.dev/?width=1200&height=800&text=House+3" alt="House 3"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </header>
+        </section>
 
-        <main>
-            <section class="hero">
-                <div class="hero-background-img">
-                    <img src="https://images.placeholders.dev/?width=200&height=200&text=Logo" alt="BG element">
-                </div>
-                <div class="hero-sliders">
-                    <div class="container">
-                        <div class="hero-sliders-wrapper">
-                            <div class="slider-content">
-                                <div class="slider-left">
-                                    <div>
-                                        <h1>ПРОЕКТИРОВАНИЕ ДОМОВ И КОТТЕДЖЕЙ</h1>
-                                        <p>Отражение Вашей индивидуальности в каждом квадратном метре</p>
-                                        <button class="btn">Подробнее</button>
-                                    </div>
-                                    <div>
-                                        <h1>ИНДИВИДУАЛЬНЫЕ ПРОЕКТЫ</h1>
-                                        <p>Воплотим любую вашу мечту в реальность с нашими архитекторами</p>
-                                        <button class="btn">Подробнее</button>
-                                    </div>
-                                    <div>
-                                        <h1>ГОТОВЫЕ РЕШЕНИЯ</h1>
-                                        <p>Выберите из сотен готовых проектов, проверенных временем</p>
-                                        <button class="btn">Подробнее</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slider-images-wrapper">
-                                <div class="slider-right">
-                                    <div><img src="https://images.placeholders.dev/?width=1200&height=800&text=House+1"
-                                            alt="House 1"></div>
-                                    <div><img src="https://images.placeholders.dev/?width=1200&height=800&text=House+2"
-                                            alt="House 2"></div>
-                                    <div><img src="https://images.placeholders.dev/?width=1200&height=800&text=House+3"
-                                            alt="House 3"></div>
-                                </div>
-                            </div>
-                        </div>
+        <section class="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-content" data-aos="fade-right">
+                        <h2><i class="fa-solid fa-house-user"></i> О нашей компании</h2>
+
+                        <p>Мы — команда увлеченных архитекторов и дизайнеров, которые верят, что дом — это не просто стены, а отражение души его владельца. Наша миссия — создавать пространства, в которых хочется жить, творить и быть счастливым.</p>
+                        <p>Мы используем только проверенные временем технологии и экологичные материалы, чтобы ваш дом был не только красивым, но и надежным, теплым и безопасным. Каждый наш проект — это уникальная история, написанная в соавторстве с клиентом.</p>
+                        <ul class="about-features">
+                            <li><i class="fa-solid fa-check"></i> Индивидуальный подход к каждому клиенту</li>
+                            <li><i class="fa-solid fa-check"></i> Гарантия качества и соблюдение сроков</li>
+                            <li><i class="fa-solid fa-check"></i> Полный цикл работ: от эскиза до сдачи</li>
+                        </ul>
+                    </div>
+                    <div class="about-image" data-aos="fade-left">
+                        <img src="https://images.placeholders.dev/?width=600&height=400" alt="Фото нашего офиса">
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section class="about">
-                <div class="container">
-                    <div class="about-grid">
-                        <div class="about-content" data-aos="fade-right">
-                            <h2><i class="fa-solid fa-house-user"></i> О нашей компании</h2>
-                            
-                            <p>Мы — команда увлеченных архитекторов и дизайнеров, которые верят, что дом — это не просто
-                                стены, а отражение души его владельца. Наша миссия — создавать пространства, в которых
-                                хочется жить, творить и быть счастливым.</p>
-                            <p>Мы используем только проверенные временем технологии и экологичные материалы, чтобы ваш
-                                дом был не только красивым, но и надежным, теплым и безопасным. Каждый наш проект — это
-                                уникальная история, написанная в соавторстве с клиентом.</p>
-                            <ul class="about-features">
-                                <li><i class="fa-solid fa-check"></i> Индивидуальный подход к каждому клиенту</li>
-                                <li><i class="fa-solid fa-check"></i> Гарантия качества и соблюдение сроков</li>
-                                <li><i class="fa-solid fa-check"></i> Полный цикл работ: от эскиза до сдачи</li>
-                            </ul>
-                        </div>
-                        <div class="about-image" data-aos="fade-left">
-                            <img src="https://images.placeholders.dev/?width=600&height=400" alt="Фото нашего офиса">
-                        </div>
-                    </div>
-                </div>
-            </section>
+    </main>
 
-        </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="scripts.js"></script>
 
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script src="scripts.js"></script>  
-        
 
-    </body>
+</body>
 
 </html>

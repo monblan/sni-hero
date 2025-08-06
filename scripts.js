@@ -1,13 +1,13 @@
-jQuery(document).ready(function($){
+jQuery(document).ready(function($) {
     var sliderLeft = $('.slider-left');
     var sliderRight = $('.slider-right');
     var heroSection = $('.hero');
 
-    sliderLeft.on('init', function(event, slick){
+    sliderLeft.on('init', function(event, slick) {
         checkSlidersInitialized();
     });
 
-    sliderRight.on('init', function(event, slick){
+    sliderRight.on('init', function(event, slick) {
         checkSlidersInitialized();
     });
 
@@ -38,4 +38,15 @@ jQuery(document).ready(function($){
             AOS.init();
         }
     }
+
+    // Бургер-меню и боковая панель
+    $('#burger').on('click', function() {
+        $('#sideMenu').addClass('open');
+        $('#overlay').addClass('active');
+    });
+
+    $('#overlay').on('click', function() {
+        $('#sideMenu').removeClass('open');
+        $('#overlay').removeClass('active');
+    });
 });

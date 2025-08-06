@@ -1,10 +1,12 @@
 /* Basic Styles */
+
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     background-color: #fff;
     color: #333;
-    overflow-x: hidden; /* Prevents horizontal scrollbar caused by the right slider */
+    overflow-x: hidden;
+    /* Prevents horizontal scrollbar caused by the right slider */
 }
 
 a {
@@ -18,21 +20,29 @@ ul {
     padding: 0;
 }
 
+
 /* Container */
+
 .container {
-    max-width: 1280px; /* Corrected from 1280px */
+    max-width: 1280px;
+    /* Corrected from 1280px */
     width: 100%;
     margin: 0 auto;
     padding: 0 15px;
     box-sizing: border-box;
 }
 
+
 /* Header */
+
 .header {
     background-color: #000;
     color: #fff;
     padding: 20px 0;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     z-index: 10;
 }
 
@@ -65,11 +75,88 @@ ul {
     font-weight: bold;
 }
 
+/* Burger and Side Menu */
+.burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    justify-content: center;
+    margin-left: 20px;
+}
+
+.burger span {
+    display: block;
+    height: 4px;
+    background: #fff;
+    border-radius: 2px;
+}
+
+@media (max-width: 1000px) {
+    .main-menu {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+    }
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background: #222;
+    color: #fff;
+    transition: left 0.3s;
+    z-index: 100;
+    padding-top: 60px;
+}
+
+.side-menu.open {
+    left: 0;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0 20px;
+}
+
+.side-menu a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 15px 0;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+}
+
+.overlay.active {
+    display: block;
+}
+
+
 /* Hero Section */
+
 .hero {
     position: relative;
-    padding: 80px 0;
-    visibility: hidden; /* Hide hero section by default */
+    padding: 72px 0;
+    margin-top: 72px;
+    visibility: hidden;
+    /* Hide hero section by default */
 }
 
 .hero-background-img {
@@ -82,7 +169,8 @@ ul {
 
 .hero-sliders .container {
     z-index: 2;
-    position: static; /* Ensure it does not create a positioning context */
+    position: static;
+    /* Ensure it does not create a positioning context */
 }
 
 .hero-sliders-wrapper {
@@ -123,23 +211,29 @@ ul {
     right: 0;
     top: 0;
     bottom: 0;
-    width: 55vw; /* Adjusted width to extend to the screen edge */
-    clip-path: polygon(119px 0, 100% 0, 100% 100%, 0% 100%); /* Slanted edge */
+    width: 55vw;
+    /* Adjusted width to extend to the screen edge */
+    clip-path: polygon(119px 0, 100% 0, 100% 100%, 0% 100%);
+    /* Slanted edge */
 }
 
-.slider-images-wrapper:before{
-	content: "";
-	position: absolute;
-	left: 56px;
-	top: -38px;
-	width: 10px;
-	height: 120%;
-	background-color: rgba(255,255,255,.5);
-	z-index: 1111;
+.slider-images-wrapper:before {
+    content: "";
+    position: absolute;
+    left: 56px;
+    top: -38px;
+    width: 10px;
+    height: 120%;
+    background-color: rgba(255, 255, 255, .5);
+    z-index: 1111;
     transform: rotate(12deg);
 }
 
-.slider-right, .slider-right .slick-list, .slider-right .slick-track, .slider-right .slick-slide, .slider-right .slick-slide > div {
+.slider-right,
+.slider-right .slick-list,
+.slider-right .slick-track,
+.slider-right .slick-slide,
+.slider-right .slick-slide>div {
     height: 100%;
 }
 
@@ -154,7 +248,9 @@ ul {
     display: block;
 }
 
+
 /* Slick Dots */
+
 .slick-dots {
     bottom: -40px;
     text-align: left;
@@ -171,9 +267,11 @@ ul {
 
 
 /* About Section */
+
 .about {
     padding: 80px 0;
-    background-color: #f8f9fa; /* Added a light background for contrast */
+    background-color: #f8f9fa;
+    /* Added a light background for contrast */
 }
 
 .about-grid {
@@ -222,19 +320,26 @@ ul {
 .about-image img {
     width: 100%;
     height: auto;
-    border-radius: 10px; /* Added rounded corners */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Added a subtle shadow */
+    border-radius: 10px;
+    /* Added rounded corners */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    /* Added a subtle shadow */
 }
 
+
 /* Responsive Adjustments for About Section */
+
 @media (max-width: 992px) {
     .about-grid {
         grid-template-columns: 1fr;
         gap: 40px;
     }
+
     .about-image {
-        order: -1; /* Image will be on top on smaller screens */
+        order: -1;
+        /* Image will be on top on smaller screens */
     }
+
     .about-content h2 {
         text-align: center;
     }
@@ -242,26 +347,32 @@ ul {
 
 
 /* Responsive Adjustments */
+
 @media (max-width: 1200px) {
     .hero-sliders-wrapper {
         flex-direction: column;
     }
-    .slider-content, .slider-images-wrapper {
+
+    .slider-content,
+    .slider-images-wrapper {
         width: 100%;
         position: static;
         transform: none;
         padding-right: 0;
-        clip-path: none; /* Remove slant on smaller screens */
+        clip-path: none;
+        /* Remove slant on smaller screens */
     }
+
     .slider-images-wrapper {
         margin-top: 40px;
         height: auto;
     }
+
     .hero-background-img {
         display: none;
     }
 
-    .slider-images-wrapper:before{
+    .slider-images-wrapper:before {
         display: none;
     }
 }
@@ -270,16 +381,20 @@ ul {
     .header-content {
         flex-direction: column;
     }
+
     .menu {
         margin: 20px 0;
     }
+
     .menu ul {
         flex-direction: column;
         align-items: center;
     }
+
     .menu li {
         margin: 10px 0;
     }
+
     .slider-left h1 {
         font-size: 36px;
     }
