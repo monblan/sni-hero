@@ -49,4 +49,9 @@ jQuery(document).ready(function($) {
         $('#sideMenu').removeClass('open');
         $('#overlay').removeClass('active');
     });
+
+    // Fancybox для кнопки Заказать звонок
+    if (typeof Fancybox !== 'undefined') {
+        Fancybox.bind('.fancybox', {});
+    }
 });
